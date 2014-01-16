@@ -57,7 +57,7 @@ public abstract class Main {
    * @throws IOException I/O exception
    */
   protected Main(final String[] args, final Context ctx) throws IOException {
-    context = ctx != null ? ctx : new Context();
+    context = ctx != null ? ctx : new Context(null);
     parseArguments(args);
 
     // console: turn on verbose mode
