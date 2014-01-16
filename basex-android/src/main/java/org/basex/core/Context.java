@@ -9,6 +9,8 @@ import org.basex.server.*;
 import org.basex.util.*;
 import org.basex.util.list.*;
 
+import java.io.File;
+
 /**
  * This class serves as a central database context.
  * It references the currently opened database, options, client sessions,
@@ -64,15 +66,22 @@ public final class Context {
   /**
    * Default constructor, which is usually called once in the lifetime of a project.
    */
-  public Context() {
-    this(true);
+  public Context(String data_dir) {
+	  this(true, (Prop.HOME = data_dir + "/"), (Prop.USERHOME = data_dir + "/"));
+
+	  File dir = new File(Prop.HOME + "BaseXData");
+	  if(!dir.exists()) {
+		  if(!dir.mkdir()) {
+			  android.util.Log.i("BASEX", "CREATING BASEX DIRECTORIES");
+		  }
+	  }
   }
 
   /**
    * Default constructor, which is usually called once in the lifetime of a project.
-   * @param file retrieve options from disk
+   * @param file retrieve properties from disk
    */
-  public Context(final boolean file) {
+  private Context(final boolean file, String home, String userhome) {
     this(new GlobalOptions(file));
   }
 

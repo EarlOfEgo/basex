@@ -18,7 +18,7 @@ public final class Prop {
   private Prop() { }
 
   /** User's home directory. */
-  public static final String USERHOME;
+  public static String USERHOME;
   /** Application URL. */
   public static final URL LOCATION;
 
@@ -73,7 +73,7 @@ public final class Prop {
   public static final String PATH = DBPREFIX + "path";
 
   /** Directory for storing the property files, database directory, etc. */
-  public static final String HOME = dir(homePath());
+  public static String HOME = dir(homePath());
 
   // STATIC OPTIONS =====================================================================
 

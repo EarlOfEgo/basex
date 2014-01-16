@@ -1,1 +1,1 @@
-include ':BaseXAndroid'
+include ':basex-android', ':basex-android-example'

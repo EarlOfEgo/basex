@@ -596,20 +596,20 @@ public enum Function {
   /* FNCrypto functions (EXPath Cryptographic module). */
 
   /** XQuery function. */
-  _CRYPTO_HMAC(FNCrypto.class, "hmac(message,key,algorithm[,encoding])",
-      arg(STR, STR, STR, STR_ZO), STR),
-  /** XQuery function. */
-  _CRYPTO_ENCRYPT(FNCrypto.class, "encrypt(input,encryption,key,algorithm)",
-      arg(STR, STR, STR, STR), STR),
-  /** XQuery function. */
-  _CRYPTO_DECRYPT(FNCrypto.class, "decrypt(input,type,key,algorithm)",
-      arg(STR, STR, STR, STR), STR),
-  /** XQuery function. */
-  _CRYPTO_GENERATE_SIGNATURE(FNCrypto.class, "generate-signature" +
-      "(input,canonicalization,digest,signature,prefix,type[,item1][,item2])",
-      arg(NOD, STR, STR, STR, STR, STR, ITEM_ZO, ITEM_ZO), NOD),
-  /** XQuery function. */
-  _CRYPTO_VALIDATE_SIGNATURE(FNCrypto.class, "validate-signature(node)", arg(NOD), BLN),
+//  _CRYPTO_HMAC(FNCrypto.class, "hmac(message,key,algorithm[,encoding])",
+//      arg(STR, STR, STR, STR_ZO), STR),
+//  /** XQuery function. */
+//  _CRYPTO_ENCRYPT(FNCrypto.class, "encrypt(input,encryption,key,algorithm)",
+//      arg(STR, STR, STR, STR), STR),
+//  /** XQuery function. */
+//  _CRYPTO_DECRYPT(FNCrypto.class, "decrypt(input,type,key,algorithm)",
+//      arg(STR, STR, STR, STR), STR),
+//  /** XQuery function. */
+//  _CRYPTO_GENERATE_SIGNATURE(FNCrypto.class, "generate-signature" +
+//      "(input,canonicalization,digest,signature,prefix,type[,item1][,item2])",
+//      arg(NOD, STR, STR, STR, STR, STR, ITEM_ZO, ITEM_ZO), NOD),
+//  /** XQuery function. */
+//  _CRYPTO_VALIDATE_SIGNATURE(FNCrypto.class, "validate-signature(node)", arg(NOD), BLN),
 
   /* FNCsv functions. */
 
@@ -1056,7 +1056,7 @@ public enum Function {
     URIS.put(FNMath.class, MATHURI);
     // EXPath functions
     URIS.put(FNBin.class,    BINURI);
-    URIS.put(FNCrypto.class, CRYPTOURI);
+//    URIS.put(FNCrypto.class, CRYPTOURI);
     URIS.put(FNFile.class,   FILEURI);
     URIS.put(FNHttp.class,   HTTPURI);
     URIS.put(FNZip.class,    ZIPURI);
