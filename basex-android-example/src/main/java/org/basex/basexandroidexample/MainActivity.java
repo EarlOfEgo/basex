@@ -14,6 +14,7 @@ public class MainActivity extends Activity {
 
         baseXDatabase = BaseXDatabase.getBaseXDatabaseInstance(getApplicationInfo().dataDir);
 
+
     }
 
 }

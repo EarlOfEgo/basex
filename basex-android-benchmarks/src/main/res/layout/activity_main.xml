@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView"
+        android:maxLines = "10000"
+        android:scrollbars = "vertical"
+        />
+
+    <Button
+        android:id="@+id/startButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start XMark Benchmarks 1 - 7"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/startButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start XMark Benchmarks 8 - 12"
+        android:layout_below="@+id/startButton1" />
+
+    <Button
+        android:id="@+id/startButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start XMark Benchmarks 13 - 20"
+        android:layout_below="@+id/startButton2" />
+
+    <Button
+        android:id="@+id/startButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start all XMark Benchmarks"
+        android:layout_below="@+id/startButton3" />
+
+    <Button
+        android:id="@+id/startTrace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startButton4"
+        android:text="Create 1 MB Traces" />
+
+    <Button
+        android:id="@+id/startTrace100Mb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startTrace"
+        android:text="Create 100 Mb Traces" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Backwards"
+        android:id="@+id/checkBox"
+        android:layout_below="@+id/startTrace100Mb"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/checkBox"
+        android:layout_toRightOf="@+id/checkBox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time to measure:"
+        android:id="@+id/textView"
+        android:layout_alignTop="@+id/spinner"
+        android:layout_alignRight="@+id/checkBox"
+        android:layout_alignEnd="@+id/checkBox" />
+
+
+</RelativeLayout>
